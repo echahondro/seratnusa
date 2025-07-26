@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Seratnusa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding-top: 90px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6d8;
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #3e240c;
+      padding: 10px 30px;
+      color: #fef2cb;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      text-decoration: none;
+      background-color: #f3e4cd;
+      color: #3e240c;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Georgia', serif;
+    }
+
+    nav a:hover {
+      background-color: #d7b98a;
+    }
+
+    .home-icon {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 60%;
+      max-width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 30px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero-text {
+      margin-top: -10px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #3e240c;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    .hero-text h2 {
+      margin-bottom: 5px;
+      font-size: 29px;
+    }
+
+    .section-pemisah2 {
+      text-align: center;
+      margin: 40px 0 10px;
+    }
+
+    .judul-pemisah2 {
+      color: #3e240c;
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    .slider {
+      padding-left: 30px; /* Sisakan ruang kiri */
+    }
+
+    .slider .produk-item:first-child {
+      margin-left: 30px;
+    }
+
+    .slider-wrapper {
+      position: relative;
+    }
+
+    .produk-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .produk-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+
+    }
+
+    .produk-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .produk-item {
+      flex: 0 0 auto;
+      width: 350px; /* ukuran asli yang kamu pakai */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fffdf6;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+
+    }
+
+    .produk-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .produk-item:hover {
+      border: 1px solid #000; 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+      transform: scale(1.03); 
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: 1px solid #ddd;
+      font-size: 24px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .nav-btn.left {
+      left: 0;
+    }
+
+    .nav-btn.right {
+      right: 0;
+    }
+
+    /* .nav-btn:hover {
+      background-color: #3e240c;
+      color: #fff;
+      border-color: #3e240c;
+    } */
+
+
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-logo img {
+      height: 140px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .produk-item {
+        width: 220px;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div><h1>SERATNUSA</h1></div>
+    <nav>
+      <a href="index.html">PROFIL</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="home.html"><img src="img/modal/home.png" alt="Home" class="home-icon"></a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="img/modal/hero3.jpg" class="hero-image" alt="Hero image">
+  </div>
+  <div class="hero-text">
+    <h2>Temukan Sentuhan Alam dalam Setiap Karya</h2>
+    <p>Jelajahi koleksi eksklusif Seratnusa — kerajinan tangan dari serat gedebog pisang yang menyatu<br>
+    dengan estetika, fungsionalitas, dan nilai budaya.</p>
+  </div>
+
+  <!-- Judul Produk -->
+  <div class="section-pemisah2">
+    <h2 class="judul-pemisah2">PRODUK</h2>
+  </div>
+
+  <!-- Produk Scroll Horizontal -->
+  <div class="produk-slider-wrapper">
+    <button class="nav-btn left" onclick="scrollLeft()">«</button>
+    <div class="produk-slider" id="produkSlider">
+      <div class="produk-item"><img src="img/modal/slide1.jpg" alt=""></div>
+      <div class="produk-item"><img src="img/modal/slide2.jpg" alt=""></div>
+      <div class="produk-item"><img src="img/modal/slide3.jpg" alt=""></div>
+      <div class="produk-item"><img src="img/modal/slide4.jpg" alt=""></div>
+      <div class="produk-item"><img src="img/modal/slide5.jpg" alt=""></div>
+    </div>
+    <button class="nav-btn right" onclick="scrollRight()">»</button>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">
+      <img src="img/modal/logo.png" alt="Logo Seratnusa">
+    </div>
+  </footer>
+
+  <!-- Script Scroll -->
+  <script>
+    const slider = document.getElementById('produkSlider');
+
+    function scrollRight() {
+      const firstItem = slider.children[0];
+      slider.appendChild(firstItem.cloneNode(true));  // kloning gambar pertama
+      slider.removeChild(firstItem);                  // hapus yang asli
+    }
+
+    function scrollLeft() {
+      const items = slider.children;
+      const lastItem = items[items.length - 1];
+      slider.insertBefore(lastItem.cloneNode(true), items[0]); // kloning gambar terakhir
+      slider.removeChild(lastItem);                             // hapus yang asli
+    }
+  </script>
+
+
+
+
+
+</body>
+</html>

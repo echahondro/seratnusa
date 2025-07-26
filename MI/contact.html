@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Seratnusa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts & CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Segoe+UI&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding-top: 90px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6d8;
+      color: #2e2e2e;
+    }
+
+    .hero-text h2 {
+      margin-bottom: 5px;
+      font-size: 60px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3e240c;
+        padding: 10px 30px;
+        color: #f3e4cd;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #f3e4cd;
+      color: #3e240c;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Georgia', serif;
+    }
+
+    nav a:hover {
+      background-color: #d7b98a;
+    }
+
+    .home-icon {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .bgimg-1 {
+      background: url('img/bg-img/gedebog1.jpg') no-repeat center center;
+      background-size: cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-title {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 30px;
+      letter-spacing: 4px;
+      font-family: 'Georgia', serif;
+      text-align: center;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 80%;
+      height: 510px;
+      object-fit: cover;
+      border-radius: 40px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero-text {
+      padding: 0;
+      margin-top: -10px;
+      margin-bottom: 0;
+      font-family: 'Times New Roman', Times, serif;
+      color: #3e240c;
+      font-size: 23px;
+      text-align: center;
+    }
+
+    .hero-text h2 {
+      font-family:'Times New Roman', Times, serif;
+      margin-bottom: 0px;
+    }
+
+    .hero-text p {
+      margin-top: 0;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 23px;
+      margin-top: 0px;
+      letter-spacing: 4px;
+    }
+
+
+    .content {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .content h3 {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      color: #5c3b18;
+    }
+
+    .content .highlight {
+      font-style: italic;
+      text-align: center;
+      display: block;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .profile-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile-text p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 30px 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      font-family: 'Georgia', serif;
+    }
+
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+      color: #3e240c;
+    }
+
+    .contact-item .icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .contact-right {
+      text-align: right;
+      max-width: 400px;
+      font-size: 18px;
+      color: #3e240c;
+    }
+
+    .contact-right h4 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      background-color: #3e240c;
+      padding-top: 0px;
+    }
+
+    .footer-logo img {
+        height: 140px;
+        width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 22px;
+        padding: 15px 20px;
+      }
+
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-text {
+        padding-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div><h1>SERATNUSA</h1></div>
+    <nav>
+      <a href="index.html">PROFIL</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="home.html"><img src="img/modal/home.png" alt="Home" class="home-icon"></a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="img/modal/contact.jpg" class="hero-image" alt="Hero image">
+  </div>
+  <div class="hero-text">
+    <h2>CONTACT US</h2>
+    <p>Ada Pertanyaan Tentang Seratnusa? <br>Kunjungi Kontak di Bawah</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="contact-info">
+    <div class="contact-left">
+      <div class="contact-item">
+        <img src="img/modal/telp.png" alt="Phone" class="icon">
+        <span>087883145675</span>
+      </div>
+      <div class="contact-item">
+        <img src="img/modal/ig1.png" alt="Instagram" class="icon">
+        <span>@Seratnusa</span>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h4>Address</h4>
+      <p>
+        Jalan Intan No. 26 Sadang Serang<br>
+        Kelurahan Sekeloa Kecamatan Coblong, Bandung
+      </p>
+    </div>
+  </div>
+
+  <footer>
+      <div class="footer-logo">
+          <img src="img/modal/logo.png" alt="Logo Seratnusa">
+      </div>
+  </footer>
+</body>
+</html>
