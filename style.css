@@ -2,6 +2,17 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+
 .img-rounded,
 .img-karya,
 .studio-img {
@@ -14,15 +25,16 @@
 /* Global */
 body {
     margin: 0;
+    padding-top: 73px;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #fdf6e3;
+    background-color: #f3e1b8;
     color: #333;
     line-height: 1.8;
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia', 'Times New Roman', Times, serif ;
     color: #3e240c;
 }
 
@@ -30,6 +42,16 @@ a {
     text-decoration: none;
     font-weight: bold;
     color: #3e240c;
+}
+
+.judul-full {
+  text-align: center;
+  background-color: #3e240c;
+  color: white;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
 }
 
 
@@ -44,9 +66,13 @@ a {
 }
 
 .col-md-6 {
-  flex: 1 1 25%;
-  max-width: 100%;
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .text-col {
     flex: 1 1 50%;
@@ -59,13 +85,19 @@ a {
 
 /* Header */
 .header {
-    background-color: #3e240c;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px; /* lebih kecil dari sebelumnya */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;
+  background-color: #3e240c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 
 .logo-area h1 {
     font-size: 20px;
@@ -87,13 +119,15 @@ a {
 }
 
 .nav-right a {
-    margin-left: 15px;
-    background-color: #f3e1b8;
+    text-decoration: none;
+    background-color: #f3e4cd;
     color: #3e240c;
-    padding: 3px 9px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
     font-family: 'Georgia', serif;
-    transition: background 0.3s;
 }
 
 .nav-right a img {
@@ -110,29 +144,164 @@ a {
 
 
 /* Hero */
+.hero {
+  background-color: #fef2cb; 
+  padding: 0;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.hero-text {
+  padding: 2rem;
+  font-family: 'Georgia', serif;
+  color: #3e2f1c;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .hero-image {
+  width: 100%;
+  max-width: 100%;
+  height: 705px;        
+  object-fit: cover;
+  /* border-radius: 75px; */
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Founder */
+.founder-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #fdf3d1;
+    padding: 40px 5%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.founder-left {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 40px 10px;
 }
 
-.hero-rounded {
-    max-width: 90%;
+.founder-left img {
+    width: 400%;
+    max-width: 300px;
     border-radius: 40px;
-    margin-bottom: 20px;
 }
 
-.hero-caption h2 {
-    font-size: 18px;
-    color: #3e240c;
+.founder-left h2 {
     font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #4b2e0f;
+    font-size: 20px;
 }
 
-.hero-caption p {
-    font-size: 14px;
-    color: #444;
-    font-style: italic;
+.founder-left .jabatan {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
+.founder-text {
+    flex: 1;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: justify;
+}
+
+/* History */
+.history-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 5%;
+  background-color: #fdf3d1;
+  align-items: center;
+}
+
+.history-left {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.history-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.history-right h2 {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  color: #4b2e0f;
+  margin-bottom: 10px;
+}
+
+.history-right p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'Georgia', serif;
+  text-align: justify;
+}
+
+.section-pemisah {
+  background-color: #4e2e0e; 
+  padding: 10px 0;
+  text-align: center;
+}
+
+.section-pemisah2 {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.judul-pemisah {
+  color: #f9eec2;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.judul-pemisah2 {
+  color: #3e240c; 
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
 
 /* Container */
 .container {
@@ -153,11 +322,22 @@ a {
 }
 
 .img-rounded {
+  max-width: 300px;
   width: 100%;
-  max-width: 100%;
   border-radius: 12px;
   margin: 15px 0;
 }
+
+.img-rounded2 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
 
 .karya-gallery {
     display: flex;
@@ -195,14 +375,14 @@ footer {
 
 .studio {
     background-color: #3e240c;
-    color: white;
+    color: #fdf3d1;
     text-align: center;
     padding: 40px 20px 20px;
 }
 
+
 .studio h3 {
     font-family: 'Georgia', serif;
-    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -214,7 +394,7 @@ footer {
 
 .alamat {
     font-family: 'Georgia', serif;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.5;
 }
 
