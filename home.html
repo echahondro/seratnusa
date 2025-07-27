@@ -9,12 +9,13 @@
   <style>
     body {
       margin: 0;
-      padding-top: 90px;
+      padding-top: 63px;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdf6d8;
-      color: #2e2e2e;
+      background-color: #f3e1b8;
+      color: #333;
+      line-height: 1.8;
       overflow-x: hidden;
-    }
+      }
 
     header {
       position: fixed;
@@ -22,13 +23,13 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background-color: #3e240c;
       padding: 10px 30px;
       color: #fef2cb;
-      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
       box-sizing: border-box;
     }
 
@@ -36,18 +37,29 @@
       font-size: 20px;
       font-family: 'Georgia', serif;
       letter-spacing: 1px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-top: 10px;
     }
 
     nav a {
       text-decoration: none;
       background-color: #f3e4cd;
       color: #3e240c;
-      padding: 5px 10px;
+      padding: 4px 6px;
       margin-left: 5px;
+      margin: 0 2px;
       border-radius: 6px;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: bold;
       font-family: 'Georgia', serif;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -64,11 +76,11 @@
     }
 
     .hero-image {
-      width: 55%;
-      max-width: 50%;
+      width: 60%;
+      max-width: 80%;
       height: auto;
       object-fit: cover;
-      border-radius: 30px;
+      border-radius: 20px;
       display: block;
       margin: 0 auto;
     }
@@ -99,7 +111,7 @@
     }
 
     .slider {
-      padding-left: 30px; /* Sisakan ruang kiri */
+      padding-left: 30px;
     }
 
     .slider .produk-item:first-child {
@@ -122,7 +134,6 @@
       gap: 20px;
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
-
     }
 
     .produk-slider::-webkit-scrollbar {
@@ -131,7 +142,7 @@
 
     .produk-item {
       flex: 0 0 auto;
-      width: 350px; /* ukuran asli yang kamu pakai */
+      width: 350px;
       border: 1px solid #ddd;
       border-radius: 8px;
       background-color: #fffdf6;
@@ -139,7 +150,6 @@
       text-align: center;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
       scroll-snap-align: start;
-
     }
 
     .produk-item img {
@@ -180,7 +190,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-
     footer {
       text-align: center;
       margin-top: 40px;
@@ -192,83 +201,85 @@
     }
 
     @media (max-width: 768px) {
+      .header {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 15px;
+      }
+
+
+      nav {
+        display: flex;
+        gap: 8px;
+      }
+
+      nav a {
+        background-color: #f5ecd8;
+        color: #4e2b14;
+        padding: 4px 6px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 10px;
+        font-family: 'Segoe UI', sans-serif;
+        transition: background-color 0.3s ease;
+        margin: 0 2px;
+      }
+
+      nav a:hover {
+        background-color: #d6c5a6;
+      }
+
+
+
       .produk-item {
         width: 220px;
         flex-shrink: 0;
       }
-    }
 
-    @media (max-width: 768px) {
-    header {
-      flex-direction: row;    
-      justify-content: space-between;
-      align-items: center;
-      /* flex-wrap: nowrap;      */
-    }
+      .hero-image {
+        width: 70%;
+      }
 
-    nav {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 5px;
-      margin-top: 8px;
-    }
+      .hero-text h2 {
+        font-size: 24px;
+        padding: 0 10px;
+      }
 
-     nav a {
-      font-size: 11px;
-      padding: 4px 8px;
-      margin: 0 2px;
-    }
+      .hero-text p {
+        font-size: 14px;
+        padding: 0 15px;
+      }
 
-    .hero-text {
-      font-family: 'Times New Roman', Times, serif;
-    }
+      .judul-pemisah2 {
+        font-size: 28px;
+      }
 
-    .hero-image {
-      width: 50%;
-      max-width: 100%;
-      border-radius: px;
-    }
+      .produk-slider-wrapper {
+        padding: 10px;
+      }
 
-    .hero-text h2 {
-      font-size: 24px;
-      padding: 0 10px;
-    }
+      .produk-slider {
+        gap: 16px;
+        padding: 0 10px;
+      }
 
-    .hero-text p {
-      font-size: 14px;
-      padding: 0 15px;
-    }
+      .nav-btn {
+        font-size: 20px;
+        padding: 6px 10px;
+      }
 
-    .judul-pemisah2 {
-      font-size: 28px;
+      .footer-logo img {
+        height: 100px;
+      }
     }
-
-    .produk-slider-wrapper {
-      padding: 10px;
-    }
-
-    .produk-slider {
-      gap: 16px;
-      padding: 0 10px;
-    }
-
-    .nav-btn {
-      font-size: 20px;
-      padding: 6px 10px;
-    }
-
-    .footer-logo img {
-      height: 100px;
-    }
-  }
-
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div><h1>SERATNUSA</h1></div>
+    <h1>SERATNUSA</h1>
     <nav>
       <a href="index.html">PROFIL</a>
       <a href="menu.html">MENU</a>
@@ -305,8 +316,6 @@
     <button class="nav-btn right" onclick="scrollRight()">»</button>
   </div>
 
-
-
   <!-- Footer -->
   <footer>
     <div class="footer-logo">
@@ -326,12 +335,5 @@
       slider.scrollBy({ left: -300, behavior: 'smooth' });
     }
   </script>
-
-
-
-
-
-
 </body>
 </html>
-

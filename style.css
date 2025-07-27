@@ -133,7 +133,7 @@ header {
 }
 
 .nav-right a img {
-    height: 18px;     /* lebih kecil dari 24px */
+    height: 10px;     /* lebih kecil dari 24px */
     width: 18px;
     vertical-align: middle;
     margin-top: 1px;
@@ -445,7 +445,29 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 14px;
+        padding: 10px 15px;
+    }
+
+
+    nav {
+      display: flex;
+      gap: 8px;
+    }
+
+    nav a {
+      background-color: #f5ecd8;
+      color: #4e2b14;
+      padding: 4px 6px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 10px;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s ease;
+      margin: 0 2px;
+    }
+
+    nav a:hover {
+      background-color: #d6c5a6;
     }
 
 
