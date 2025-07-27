@@ -18,23 +18,20 @@
       color: #2e2e2e;
     }
 
-    .hero-text h2 {
-      margin-bottom: 5px;
-      font-size: 60px;
-    }
-
     header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #3e240c;
-        padding: 10px 30px;
-        color: #f3e4cd;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #3e240c;
+      padding: 10px 30px;
+      color: #fef2cb;
+      flex-wrap: wrap;
+      box-sizing: border-box;
     }
 
     header h1 {
@@ -43,9 +40,13 @@
       letter-spacing: 1px;
     }
 
+    .hero-text h2 {
+      margin-bottom: 5px;
+      font-size: 60px;
+    }
+
     nav a {
       text-decoration: none;
-      color: #fff;
       background-color: #f3e4cd;
       color: #3e240c;
       padding: 5px 10px;
@@ -237,19 +238,43 @@
       }
     }
 
-    @media (max-width: 768px) {
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+      }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      nav {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        font-size: 10px;
+        padding: 4px 6px;
+        margin: 0 2px;
+      }
+
+      .home-icon {
+        width: 16px;
+      }
+
+      header h1 {
+        font-size: 16px;
+      }
+
+      .produk-container {
+        grid-template-columns: 1fr !important; /* 1 kolom di HP */
+        padding: 20px 10px;
+      }
+
+      .produk-item {
+        padding: 20px;
+      }
     }
-  }
 
   </style>
 </head>
@@ -269,7 +294,7 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <img src="img/modal/contact.jpg" class="hero-image" alt="Hero image">
+    <img src="img/modal/contact.webp" class="hero-image" alt="Hero image">
   </div>
   <div class="hero-text">
     <h2>CONTACT US</h2>
